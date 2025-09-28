@@ -14,10 +14,11 @@ app.get('/health', (req, res) => {
         timestamp: new Date().toISOString(),
         service: 'node-api-starter',
         version: '1.0.0'
-    })
+    });
 });
 
 //Error Handling Middleware
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({
